@@ -9,9 +9,9 @@ export default function Contact() {
           <h2>Open to learning, collaboration, and opportunities.</h2>
 
           <div className="contact-list">
-            <a href="mailto:nethrasri@gmail.com">
+            <a href="mailto:nethrasri1207@gmail.com">
               <FaEnvelope />
-              <span>nethrasri@gmail.com</span>
+              <span>nethrasri1207@gmail.com</span>
             </a>
             <a href="tel:+916385900912">
               <FaPhoneAlt />
