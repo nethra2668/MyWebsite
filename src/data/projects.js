@@ -1,29 +1,23 @@
 export const projects = [
+
   {
-    title: 'Data Analysis Project',
-    tag: 'Coming Soon',
-    description: 'A placeholder project card for a data analysis initiative that will be replaced with a real dataset-driven portfolio project.',
-    technologies: ['Python', 'Pandas', 'Data Cleaning'],
+    title: 'House Price Prediction',
+    tag: 'Data Science',
+    description: 'A Python-based machine learning project developed to predict house prices using property-related features. The project involved data preprocessing, analysis, and applying machine learning techniques to build a predictive model.',
+    technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
     github: '#',
     live: '#',
     featured: true,
   },
+
   {
-    title: 'Data Visualization Project',
-    tag: 'Coming Soon',
-    description: 'A placeholder project card for a storytelling-focused visualization project built around real-world insights and dashboards.',
-    technologies: ['Python', 'Matplotlib', 'Visualization'],
+    title: 'WiFi Surveillance Robot using NodeMCU',
+    tag: 'IoT',
+    description: 'A WiFi-controlled surveillance robot built using NodeMCU. The project demonstrates the integration of IoT, hardware components, WiFi communication, and embedded programming.',
+    technologies: ['NodeMCU', 'IoT', 'WiFi', 'Embedded Systems'],
     github: '#',
     live: '#',
-    featured: false,
+    featured: true,
   },
-  {
-    title: 'AI / Data Science Project',
-    tag: 'Coming Soon',
-    description: 'A placeholder project card for an AI or machine learning project that will be added when a completed portfolio project is ready.',
-    technologies: ['Machine Learning', 'Python', 'AI'],
-    github: '#',
-    live: '#',
-    featured: false,
-  },
+
 ];
