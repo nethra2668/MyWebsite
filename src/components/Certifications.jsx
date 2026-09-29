@@ -11,37 +11,63 @@ export default function Certifications() {
         </div>
 
         <div className="cert-grid">
-          {certifications.map((cert) => (
-            <article key={cert.id} className={`cert-card reveal ${cert.accent}`}>
-              <div className="cert-topline">
-                <span className="badge">{cert.organization}</span>
-                <span className="cert-date">{cert.date}</span>
-              </div>
+          {certifications.map((cert) => {
+            const isPdf = cert.image?.toLowerCase().includes('.pdf');
 
-              <h3>{cert.name}</h3>
+            return (
+              <article
+                key={cert.id}
+                className={`cert-card reveal ${cert.accent}`}
+              >
+                <div className="cert-image">
+                  {isPdf ? (
+                    <iframe
+                      src={cert.image}
+                      title={`${cert.name} certificate`}
+                    />
+                  ) : (
+                    <img
+                      src={cert.image}
+                      alt={`${cert.name} certificate`}
+                    />
+                  )}
+                </div>
 
-              <p className="cert-meta">{cert.organization}</p>
+                <div className="cert-topline">
+                  <span className="badge">{cert.organization}</span>
+                  <span className="cert-date">{cert.date}</span>
+                </div>
 
-              <p className="cert-description">{cert.description}</p>
+                <h3>{cert.name}</h3>
 
-              <div className="cert-actions">
-                {cert.verificationUrl ? (
-                  <a
-                    href={cert.verificationUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary btn-small"
-                  >
-                    View Certificate <FaExternalLinkAlt />
-                  </a>
-                ) : (
-                  <button type="button" className="btn btn-secondary btn-small" aria-label={`View certificate for ${cert.name}`}>
-                    View Certificate <FaFileAlt />
-                  </button>
-                )}
-              </div>
-            </article>
-          ))}
+                <p className="cert-meta">{cert.organization}</p>
+
+                <p className="cert-description">{cert.description}</p>
+
+                <div className="cert-actions">
+                  {cert.verificationUrl ? (
+                    <a
+                      href={cert.verificationUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary btn-small"
+                    >
+                      View Certificate <FaExternalLinkAlt />
+                    </a>
+                  ) : (
+                    <a
+                      href={cert.image}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-secondary btn-small"
+                    >
+                      View Certificate <FaFileAlt />
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
